@@ -31,8 +31,9 @@
         </script>
     </head>
     <body>
-        <h1 id="title">Enes Kaya, Marcel Lange</h1>
-
+        <h1> Enes Kaya, Marcel Lange</h1>
+        <p> Praktikum 01</p>
+        <p> Gruppe 02</p>
 
         <h2>
             Aufgabe 1
@@ -534,7 +535,7 @@
 
                 this.head = function () {
                     return array[0];
-                }
+                };
 
                 this.tail = function () {
                     for (var i = 0; i < size; i++) {
@@ -608,11 +609,11 @@
             for (var i = 1; i < 100; i++) {
                 arrayList_3.insert(i, 0);
                 arrayList_4.insert(i, i - 1);
-                arrayList_5.insert(i, Math.floor(Math.random() * i));
+                arrayList_5.insert(i, Math.floor(Math.random() % i));
                 var aufgabe5_mittelwert = 0;
                 var iterationen = 10;
                 for (var j = 0; j < iterationen; j++) {
-                    arrayList_5_1.insert(i, Math.floor(Math.random() * i));
+                    arrayList_5_1.insert(i, Math.floor(Math.random() % i));
                     aufgabe5_mittelwert += arrayList_5_1.getRefCounter();
                     arrayList_5_1.resetRefCounter();
                 }
@@ -668,7 +669,8 @@
         <p>ArrayList Experimente</p>
         <p>Wenn wir bei unserer Arraylist ein Element vorne anfügen, so benötigen wir eine lineare Anzahl an schritten $O(n)$, da wir die restlichen Elemente der Liste beim vorne einfürgen $n$ mal nach rechts verschieben müssen (blaue Linie).
         Wollen wir jedoch am ende der Arraylist ein Element hinzufügen benötigen wir $O(1)$ schritte (graue Linie).
-        Durch das Einfügen der Elemente an einer Zufälligen stelle bekommen wir einen Mittelwert raus $O(n)$ (grüne Linie). </p>
+        Durch das Einfügen der Elemente an einer Zufälligen stelle bekommen wir einen Mittelwert raus $O(n)$ (grüne Linie).
+        Die Peaks entstehen durch das erhöhen der Array Kapazität.</p>
         <div id="ad-1-3-array-experiments" style="height: 250px;"></div>
         <script>
             new Morris.Line({
